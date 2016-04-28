@@ -1,4 +1,4 @@
-class ListsController < ApplicationController
+class TasksController < ApplicationController
   
   def new
     @task = Task.new
@@ -17,7 +17,7 @@ class ListsController < ApplicationController
   end
   
   def create
-    @task = Task.new(address_params)
+    @task = Task.new(task_params)
     if @task.save
       redirect_to tasks_path
     else
@@ -40,12 +40,13 @@ class ListsController < ApplicationController
   def destroy
     Task.find(params[:id]).destroy
     flash[:success] = "Task eliminated"
+    redirect_to tasks_path
   end
   
   private
   
   def task_params
-     params.require(:list).permit(:name, :description, :date, :status)
+     params.require(:task).permit(:name, :description, :date, :status)
   end
   
 

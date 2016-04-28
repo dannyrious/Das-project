@@ -1,0 +1,121 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+$LogoColor: #D12427;
+
+body {
+  padding-top: 60px;
+  background-color: #fff;
+}
+
+.info_block{
+    background-color: #fff;
+}
+
+.titulo{
+  color:#D12427;
+}
+
+.navbar-inverse {
+  background-color: #000;
+  border-color: #000;
+}
+
+/* footer */
+
+.footer{
+    margin-bottom: 0;
+    background-color: #b7b7b7;
+    padding:20px;
+    width:100%;
+}
+.text-muted{
+    color: #000;
+    margin-bottom: 1px;
+}
+.logofooter{
+    width: 180px;
+    margin: 5px;
+    margin-bottom: 15px;
+}
+
+
+/* Header */
+.header_body { padding: 10px; }
+.navbar{
+    color: #fff;
+    background-color:#D12427;
+}
+.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+    color: #D12427;
+    background-color:#fff;
+}
+.navbar-default .navbar-nav>li>a{ color: #fff;}
+.navbar-default .navbar-nav>li>a:hover{
+    color: #fff;
+    text-decoration: underline;
+}
+.navbar-default .navbar-text { color: #fff;}
+.navbar-default .navbar-link {color: #fff;}
+.navbar-default .navbar-link:hover {color: #fff;}
+.navbar-default .navbar-link:active {color: #fff;}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form {border-color: #D12427;}
+.navbar-nav>li>a {line-height: 50px;color:#fff;}
+.logoMenu{padding-right: 20px;padding-left: 20px;}
+.navbar-default .navbar-nav>.open>a, .navbar-default .navbar-nav>.open>a:focus, .navbar-default .navbar-nav>.open>a:hover{
+	color:#fff;
+	background-color:#D12427; 
+}
+.dropdown-toggle{color: #fff}
+.dropdown-toggle:hover{color: #fff}
+
+
+
+
+/*footer test*/
+html, body, .container, .content {
+    height: 100%;
+}
+
+.container, .content {
+    position: relative;
+}
+
+.proper-content {
+    padding-top: 40px; /* >= navbar height */
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -50px; /* same as the footer */
+}
+
+.push {
+    height: 50px; /* same as the footer */
+}
+.footer-wrapper {
+    position: relative;
+    height: 50px;
+}
+
+
+/* mixins, variables, etc. */
+
+@mixin box_sizing {
+  -moz-box-sizing:    border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing:         border-box;
+}
+
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}

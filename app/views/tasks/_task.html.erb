@@ -1,0 +1,41 @@
+<tr>
+    <td>
+        <div class="btn-group">
+            <%= link_to "See", task, :class => 'btn btn-default' %>
+            <%= link_to 'Edit', edit_task_path(task), :class => 'btn btn-default' %>
+            <%= link_to "Delete", task, method: :delete, :class => 'btn btn-default', data: { confirm: "Delete task?" } %>
+        </div>
+    </td>
+
+    <td>
+        <%= task.name %>
+    </td>
+    
+    
+    
+    <td>
+        <%=  task.description %>
+    </td>
+    
+    
+    
+    <td>
+        <% if task.date.nil? %>
+            --
+        <% else %>
+            <%= task.date %>
+        <% end %>
+    </td>
+    
+    
+    <td>
+        <% if task.status == "toDo" %>
+                    <%= "To Do" %>
+        <% elsif task.status == "inProgress" %>
+            <%= "In Progress" %>
+        <% else %>
+            <%= "Done" %>
+        <% end %>
+    </td>
+    
+</tr>

@@ -1,0 +1,26 @@
+
+ <h1><%= @task.name%></h1>
+ <p>Description</p>
+ <p><%= @task.description%></p>
+ <p>Date</p>
+ <p><%= @task.date%></p>
+ <p>Status</p>
+
+ 
+ <% if @task.status == "toDo" %>
+                  <p>  <%= "To Do" %> </p>
+        <% elsif @task.status == "inProgress" %>
+            <p><%= "In Progress" %> </p>
+        <% else %>
+           <p> <%= "Done" %> </p>
+        <% end %>
+ 
+ 
+ <div class="col-md-3">
+                <div class="col-md-6">
+                    <%= button_to "New task", newtask_path, :class => "btn btn-default", :method => :get  %>
+                    <%= link_to 'Edit', edit_task_path(@task), :class => 'btn btn-default' %>
+                        <%= link_to "Back", tasks_path, :class => 'btn btn-default' %>
+                    </div>
+            </div>
+        </div>
